@@ -34,7 +34,7 @@ public class Buscar {
                 String contrasenia1 = "123456";
                 /*Conectado*/
                 try(Connection connection = DriverManager.getConnection(url, usuario1, contrasenia1)){
-                    String sql = "select * from pacientes where cedula='"+pacienteNuevo.getCedula()+"'";
+                    String sql = "select * from paciente where cedula='"+pacienteNuevo.getCedula()+"'";
                     PreparedStatement busca = connection.prepareStatement(sql);
                     ResultSet resultado = busca.executeQuery();
                     if(resultado.next()){
